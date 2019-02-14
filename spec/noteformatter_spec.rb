@@ -5,9 +5,10 @@ describe NoteFormatter do
   let (:note) {double :note}
   let (:formatter) { NoteFormatter.new }
 
+
   it "responds to #format" do
-    expect(formatter).to respond_to(:format)
+    expect(formatter).to respond_to(:format).with(1).argument
   end
 
-
+  
 end
