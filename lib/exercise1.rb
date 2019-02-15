@@ -1,6 +1,6 @@
 class Note
 
-  def initialize(title, body, note_formatter = NoteFormatter.new)
+  def initialize(title, body, note_formatter:)
     @title = title
     @body = body
     @formatter = note_formatter
