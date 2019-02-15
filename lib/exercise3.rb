@@ -1,10 +1,12 @@
 class Diary
-  def initialize
+
+  def initialize(entry = Entry.new("A title", "A body"))
+    @entry = entry
     @entries = []
   end
 
   def add(title, body)
-    @entries << Entry.new(title, body)
+    @entries << @entry
   end
 
   def index
@@ -13,13 +15,17 @@ class Diary
     end
     titles.join("\n")
   end
+
+
 end
 
 class Entry
+
   def initialize(title, body)
     @title = title
     @body = body
   end
 
   attr_reader :title, :body
+
 end
