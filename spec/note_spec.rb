@@ -13,7 +13,10 @@ describe Note do
   end
 
   it "does the #display method properly" do
+    note_formatter_double = double :note_formatter, format: "stuff"
     expect(note.display).to eq("Title: A note\nA body")
   end
+
+
 
 end

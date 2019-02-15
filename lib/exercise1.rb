@@ -1,6 +1,6 @@
 class Note
 
-  def initialize(title, body, note_formatter:)
+  def initialize(title, body, note_formatter = NoteFormatter.new)
     @title = title
     @body = body
     @formatter = note_formatter
@@ -14,10 +14,10 @@ class Note
 
 end
 
-class NoteFormatter
+ class NoteFormatter
 
-  def format(note)
-    "Title: #{note.title}\n#{note.body}"
-  end
+   def format(note)
+     "Title: #{note.title}\n#{note.body}"
+   end
 
-end
+ end
